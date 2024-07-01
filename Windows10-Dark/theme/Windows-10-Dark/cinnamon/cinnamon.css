@@ -362,76 +362,21 @@ StScrollBar StButton#hhandle:focus {
 /* ===================================================================
  * Panel (panel.js)
  * ===================================================================*/
-
-#panel {
-  background-color: rgba(57, 57, 57, 0.721); /* Adjust the alpha value (0.75) for increased opacity */
-  outline: 1px rgba(0, 0, 0, 0.95);
-  color: #ffffff;
-}
-
-#panelLeft,
-#panelCenter,
-#panelRight {
-  spacing: 0px;
-}
-
-#panelLeft .applet-box:first-child {
-  transition-duration: 300;
-  background-size: cover;
-  width: 35px;
-  height: 40px;
-  color: #ffffff;
-}
-
-#panelLeft .applet-box:first-child:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-#panelLeft .applet-box:first-child:active {
-  background-color: rgba(255, 255, 255, 0.25);
-}
-
-#panelLeft:ltr {
-  padding-left: 0px;
-}
-
-#panelLeft:rtl {
-  padding-left: 0px;
-}
-
-#panelRight:ltr {
-  padding-right: 0px;
-  spacing: 0px;
-}
-
-#panelRight:rtl {
-  padding-right: 0px;
-  spacing: 0px;
-}
-
-#panelLeft.vertical {
-  padding: 0px;
-}
-
-#panelLeft.vertical:ltr {
-  padding-right: 0px;
-}
-
-#panelLeft.vertical:rtl {
-  padding-left: 0px;
-}
-
-#panel:highlight {
-  background-color: #004D8C;
+ #panel {
+  background-color: rgba(23, 39, 52, 0.788); /* Adjust the alpha value (0.788) for increased opacity */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Adding a subtle box shadow */
+  color: rgba(255, 255, 255, 0.95); /* Adjust the alpha value (0.95) for text opacity */
+  font-weight: bold; /* Ensures all text inside #panel is bold */
+  border: 1px solid rgba(0, 0, 0, 0.95); /* Adding a solid border */
+  border-radius: 2px;
 }
 
 .panel-status-button,
 .panel-button {
-  -natural-hpadding: 5px;
-  -minimum-hpadding: 5px;
-  font-weight: bold;
+  padding: 5px; /* Adjusted padding */
+  font-weight: bold; /* Ensures all text inside .panel-status-button and .panel-button is bold */
   border: 1px solid transparent;
-  transition-duration: 150;
+  transition-duration: 150ms;
 }
 
 .panel-status-button:hover,
@@ -440,14 +385,14 @@ StScrollBar StButton#hhandle:focus {
   border-radius: 0px;
   color: #083854;
   box-shadow: inset 0px -1px 0px 0px rgba(37, 154, 202, 1);
-  transition-duration: 100;
+  transition-duration: 100ms;
 }
 
 .system-status-icon {
-  icon-size: 1.3em;
+  font-size: 1.3em; /* Corrected property name to 'font-size' */
 }
 
-##panel:dnd {
+#panel:dnd { /* Use a single hash symbol to denote ID selector */
   background: #4c4c4c;
 }
 
@@ -458,6 +403,7 @@ StScrollBar StButton#hhandle:focus {
 #panelRight:dnd {
   background: #3c3c3c;
 }
+
 
 /* ===================================================================
  * Expo view
@@ -654,26 +600,27 @@ StScrollBar StButton#hhandle:focus {
 /* ===================================================================
  * Date applet
  * ===================================================================*/
-
+/* Main calendar container menu */
 .calendar {
   padding: 6px 18px 8px 18px;
   spacing-rows: 5px;
   spacing-columns: 5px;
+  font-weight: bold;
 }
 
 .datemenu-date-label {
   padding: .5em 0 .5em 0;
-  font-size: 12pt;
-  font-weight: normal;
+  font-size: 14pt;
+  font-weight: bold;
   text-align: center;
-  color: #ffffff;
+  color: #19976d;
 }
-
+/* July 2024 */
 .calendar-month-label {
   padding-top: 2px;
   font-size: 12pt;
-  font-weight: normal;
-  color: #888;
+  font-weight: bold;
+  color: #75b3ab;
 }
 
 .calendar-change-month-back,
@@ -707,7 +654,9 @@ StScrollBar StButton#hhandle:focus {
 }
 
 .calendar-day-base {
-  font-size: 12pt;
+  font-size: 10pt;
+  font-style: inherit;
+  font-weight: bold;
   text-align: center;
   width: 32px;
   height: 32px;
@@ -715,19 +664,22 @@ StScrollBar StButton#hhandle:focus {
 
 .calendar-day-base:active {}
 
+/* Mon Tue Wed */
 .calendar-day-heading {
   font-size: 9pt;
   color: #ffffff;
+  font-weight: bold;
   padding-top: 12px;
   padding-bottom: 6px;
   height: 15px;
 }
 
 .calendar-week-number {
-  color: rgba(255, 255, 255, .3);
+  color: rgba(88, 233, 178, 0.677);
   font-size: 8pt;
-  height: 16px;
-  width: 12px;
+  font-weight: bold;
+  height: 17px;
+  width: 15px;
   padding-top: 7px;
   padding-right: 6px;
 }
@@ -1963,6 +1915,7 @@ StScrollBar StButton#hhandle:focus {
 /* ===================================================================
  * Applets (applet.js)
  * ===================================================================*/
+ .applet-label { font-weight: bold; }
 
 .applet-separator {
   background-image: url("panel-assets/panel-separator.svg");
@@ -1974,7 +1927,7 @@ StScrollBar StButton#hhandle:focus {
 .applet-separator-line {}
 
 .applet-box {
-  font-weight: normal;
+  font-weight: bold;
   color: #ffffff;
   padding-left: 13px;
   padding-right: 5px;
